@@ -1,58 +1,59 @@
-/* body{
-    background-color: rgb(247, 248, 247);
+body{
+    background-color: rgb(84, 169, 84);
 }
 
 #titulo {
-    color: red;
+    color: rgb(11, 88, 35);
+    text-align: center;
 }
 
 #logoInformacoes{
-    display: inline-block;
-    width: 30%;
+    display: flex;
+    justify-content: center;
     margin-left: 10px;
+    align-items: center;
 }
 
-#formularioCliente{
-    border: 3px rgb(16, 86, 19) solid;
+
+/* Estilo para o formulário */
+form {
+    width: 100%;
+    max-width: 800px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda */
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
     padding: 10px;
-    border-radius: 20px;
-    display: inline-block;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 50%;
-    height: 100%;
-    position: relative;
-    bottom : 10px;
-}
-
-#formularioCliente > label,input{
-    font-family: 'Times New Roman';
-    font-size: medium;
-    margin: 10px;
-    
-}
-
-#formularioProduto{
-    border: 3px rgb(16, 86, 19) solid;
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 50px;
-}
-
-#formularioProduto > label{
-    margin-left: 20px;
-}
-
-input{
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    
+    box-sizing: border-box; /* Garante que a largura do elemento inclua o preenchimento e a borda */
 }
 
+/* Estilo para os botões */
+button {
+    background-color: #007bff; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar por cima */
+}
 
+/* Estilo para o botão de envio */
+button[type="submit"] {
+    background-color: #28a745; /* Cor de fundo */
+}
 
-
- */
-
- #formularioCliente{
-    margin-bottom: 50px;
+/* Estilo para os rótulos */
+label {
+    font-weight: bold; /* Deixa o texto em negrito */
 }

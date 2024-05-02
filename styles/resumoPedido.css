@@ -48,3 +48,29 @@ th {
     display: flex;
     justify-content: center;
 }  */
+
+/* Estilo básico para tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo para as células de cabeçalho */
+th {
+    background-color: #f2f2f2; /* Cor de fundo */
+    border: 1px solid #dddddd; /* Borda */
+    padding: 8px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto */
+}
+
+/* Estilo para células de dados */
+td {
+    border: 1px solid #dddddd; /* Borda */
+    padding: 8px; /* Espaçamento interno */
+}
+
+/* Estilo para linhas alternadas (opcional) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}

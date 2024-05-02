@@ -14,11 +14,8 @@ document.getElementById('formularioProduto').addEventListener('submit', function
 document.getElementById('botaoLimpar').addEventListener('click', function() {
     limparFormulario();
 });
-    
-document.getElementById('mostrarProdutos').addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log(produtos); 
-});     
+
+
 
 
 function salvarCliente(){
@@ -89,13 +86,3 @@ function iterarElemento(elemento){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

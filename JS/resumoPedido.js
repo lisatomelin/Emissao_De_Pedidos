@@ -3,6 +3,9 @@ console.log(cliente);
 let produtos = JSON.parse(localStorage.getItem('Produtos'));
 console.log(produtos);
 
+// Adiciona um evento de clique ao botão para chamar a função gerarPDF
+document.getElementById('btnGerarPDF').addEventListener('click', gerarPDF);
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nome').textContent = "Nome: " + cliente.nome;
     document.getElementById('dataNascimento').textContent  = "Data de nascimento: " + cliente.dataNascimento;
@@ -24,19 +27,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function(){
     let tbody = document.getElementById('tbody');
-    let linha = tbody.insertRow();
-    linha.insertCell().textContent = produtos.localInstalacao;
+    produtos.forEach(x => {
+        let linha = tbody.insertRow();
+        linha.insertCell().textContent = x.localInstalacao; 
+        linha.insertCell().textContent = x.unidades; 
+        linha.insertCell().textContent = x.largura; 
+        linha.insertCell().textContent = x.altura; 
+        linha.insertCell().textContent = x.metrosQuadrado; 
+        linha.insertCell().textContent = x.alturaComando; 
+        linha.insertCell().textContent = x.modeloCorNumero; 
+        linha.insertCell().textContent = x.comando; 
+        linha.insertCell().textContent = x.bando; 
+        linha.insertCell().textContent = x.colocacao; 
+        linha.insertCell().textContent = x.preco; 
+    });
 })
 
-// localInstalacao: document.getElementById('localInstalacao').value,
-// unidades: document.getElementById('unidades').value,
-// largura: document.getElementById('largura').value,
-// altura: document.getElementById('altura').value,
-// metrosQuadrado: document.getElementById('metrosQuadrado').value,
-// alturaComando: document.getElementById('alturaComando').value,
-// modeloCorNumero: document.getElementById('modeloCorNumero').value,
-// comando: iterarElemento(document.getElementsByName('comando')),
-// bando: iterarElemento(document.getElementsByName('opcaoBando')),
-// colocacao: iterarElemento(document.getElementsByName('opcaoFixacao')),
-// precoUnitario: document.getElementById('precoUnitario').value,
+// Função para gerar PDF
+function gerarPDF() {
+    // Cria um novo objeto jsPDF
+    var doc = new jsPDF();
+
+    // Adiciona o conteúdo da página ao PDF
+    doc.html(document.body, {
+        callback: function () {
+            // Salva o PDF
+            doc.save('pagina.pdf');
+        }
+    });
+}
+
+
+
+
 

@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(84, 169, 84);
+    background-color: rgb(75, 203, 75);
 }
 
 #titulo {
@@ -14,7 +14,10 @@ body{
     align-items: center;
 }
 
-
+.tituloFormulario{
+    text-align: center;
+    margin: 20px;
+}
 /* Estilo para o formulário */
 form {
     width: 100%;
@@ -28,13 +31,16 @@ form {
 
 /* Estilo para os campos de entrada */
 input[type="text"],
+input[type="number"],
+input[type="date"],
 input[type="email"],
+input[type="tel"],
 textarea {
-    width: 100%;
+    width: 49%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 30px;
     box-sizing: border-box; /* Garante que a largura do elemento inclua o preenchimento e a borda */
 }
 
@@ -56,4 +62,9 @@ button[type="submit"] {
 /* Estilo para os rótulos */
 label {
     font-weight: bold; /* Deixa o texto em negrito */
+    width: 25%;
+}
+
+.radio{
+ width: 100% !important;
 }

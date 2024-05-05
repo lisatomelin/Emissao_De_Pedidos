@@ -27,7 +27,7 @@
         </ul>
       </div>
     </div>
-
+    <h2 class="tituloFormulario">Cadastramento do Cliente </h2>
     <form id="formularioCliente" >
       
       <label for="nome">Nome:</label>
@@ -36,23 +36,17 @@
       <label for="dataNascimento">Data de Nascimento:</label>
       <input type="date" id="dataNascimento" name="dataNascimento">
 
-      <br>
-
       <label for="cpf_cnpj">CPF/CNPJ: </label>
       <input type="text" id="cpf_cnpj" name="cpf_cnpj" required>
 
       <label for="endereco">Endereço:</label>
       <input type="text" id="endereco" name="endereco"></input>
 
-      <br>
-      
       <label for="numeroCasa">Número da Casa:</label>
       <input type="number" id="numeroCasa" name="numeroCasa" required></input>
 
       <label for="bairro">Bairro: </label>
       <input type="text" id="bairro" name="bairro">
-      
-      <br>
       
       <label for="cep">CEP: </label>
       <input type="number" name="cep" id="cep">
@@ -60,31 +54,23 @@
       <label for="cidade">Cidade: </label>
       <input type="text" id="cidade" name="cidade">
 
-      <br>
-      
       <label for="estado">Estado</label>
       <input type="text" id="estado" name="estado">
       
       <label for="telefoneResidencial">Telefone Residencial: </label>
       <input type="tel" id="telefoneResidencial" name="telefoneResidencial">
-      
-      <br>
 
       <label for="telefonePessoal">Telefone Pessoal: </label>
       <input type="tel" id="telefonePessoal" name="telefonePessoal">
       
       <label for="proximidade">Proximidade: </label>
       <input type="text" id="proximidade" name="proximidade">
-      
-      <br>
 
       <label for="vendedor">Vendedor: </label>
       <input type="text" id="vendedor" name="vendedor">
 
       <label for="numeroPedido">Número do Pedido: </label>
       <input type="number" id="numeroPedido" name="numeroPedido">
-      
-      <br>
       
       <label for="observacao">Obs: </label>
       <textarea name="observacao" id="observacao"></textarea>
@@ -98,6 +84,7 @@
   </nav>
 
   <section>
+    <h2 class="tituloFormulario">Cadastramento dos Produtos</h2>
     <form id="formularioProduto" action="">
 
       <label for="localInstalacao">Local de Instalação:</label>
@@ -109,43 +96,37 @@
       <label for="largura">Largura: </label>
       <input type="number" id="largura" name="largura" required>
       
-      <br>
-
       <label for="altura">Altura: </label>
       <input type="number" id="altura" name="altura" required></input>
 
       <label for="alturaComando">Altura Comando: </label>
       <input type="number" id="alturaComando" name="alturaComando">
       
-      <br>
-      
       <label for="modeloCorNumero">Modelo Cor e Número: </label>
       <input type="text" name="modeloCorNumero" id="modeloCorNumero" required>
       
-      <label style="display: inline-block;">Comando: </label>
+      <label class="radio"> Comando: </label><br>
       <input type="radio" id="cd" name="comando" value="CD">
-      <label for="cd">CD</label>
+      <label class="radio" for="cd">CD</label>
       
       <input type="radio" id="ce" name="comando" value="CE">
-      <label for="ce">CE</label>
-      
+      <label class="radio" for="ce">CE</label>
       
       <input type="radio" id="hd" name="comando" value="HD">
-      <label for="hd">HD</label>
-      <br>
+      <label class="radio" for="hd">HD</label>
       
-      <label style="display: inline-block;">Bando:</label>
+      <label class="radio"> Bando:</label><br>
 
-      <input type="radio" id="bandoSim" name="opcaoBando" value="sim">
-      <label for="bandoSim">Sim</label>
+      <input type="radio" id="bandoSim" name="opcaoBando" value="Sim">
+      <label class="radio" for="bandoSim">Sim</label>
       
-      <input type="radio" id="bandoNao" name="opcaoBando" value="não">
-      <label for="bandoNao">Não</label>
+      <input type="radio" id="bandoNao" name="opcaoBando" value="Não">
+      <label class="radio" for="bandoNao">Não</label>
 
-      <label>Teto/Suporte/Dentro do Vão:</label>
+      <label class="radio"> Teto/Suporte/Dentro do Vão:</label><br>
       
       <input type="radio" id="teto" name="opcaoFixacao" value="Teto">
-      <label for="teto">Teto</label>
+      <label class="radio" for="teto">Teto</label>
       
       <input type="radio" id="suporte" name="opcaoFixacao" value="Suporte">
       <label for="suporte">Suporte</label>
@@ -159,8 +140,8 @@
       <button type="submit" value="Salvar">Salvar</button>
       
       <button id="botaoLimpar">Limpar</button>
+      <button>Ir Para Resumo<a href="./resumoPedido.html">Resumo Pedido</a></button>
     </form>
-    <a href="./resumoPedido.html">Resumo Pedido</a>
   </section>
 </body>
 

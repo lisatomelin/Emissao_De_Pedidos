@@ -4,7 +4,21 @@ let produtos = JSON.parse(localStorage.getItem('Produtos'));
 console.log(produtos);
 
 // Adiciona um evento de clique ao botão para chamar a função gerarPDF
-document.getElementById('btnGerarPDF').addEventListener('click', gerarPDF);
+document.getElementById('btnGerarPDF').addEventListener('click', () => {
+    //CONTEÚDO DO PDF
+    const body = document.querySelector('body');
+
+    //CONFIGURAÇÃO DO ARQUIVO FINAL DO PDF
+    const options = {
+        margin : [10,10,10,10],
+        filename: `${cliente.nome}_${cliente.cpf_cnpj}.pdf`,
+        html2canvas: {scale: 2},
+        jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}
+    }
+
+    //GERAR E BAIXAR PDF
+    html2pdf().set(options).from(body).save();
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nome').textContent = "Nome: " + cliente.nome;
@@ -43,19 +57,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 })
 
-// Função para gerar PDF
-function gerarPDF() {
-    // Cria um novo objeto jsPDF
-    var doc = new jsPDF();
-
-    // Adiciona o conteúdo da página ao PDF
-    doc.html(document.body, {
-        callback: function () {
-            // Salva o PDF
-            doc.save('pagina.pdf');
-        }
-    });
-}
 
 
 

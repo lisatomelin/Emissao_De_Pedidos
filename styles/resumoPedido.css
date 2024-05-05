@@ -1,59 +1,9 @@
-/* body{
-    background-color: rgb(153, 238, 136)!important;
-}
 
-#dadosCliente{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.descricaoCliente{
-    background-color: rgb(37, 76, 30);
-    border-radius: 30px;
-    width: 1000px;
-}
-.bloco{
-    margin: 20px;
-    display: flex;
-    gap: 50px;
-}
-
-#dadosProdutos{
-    margin-top: 100px;
-    width: 90%;
-    text-align: center;
-}
-
-table {
-    background-color: rgb(37, 76, 30);
-    width: 90%;
-    border-collapse: collapse;
-    color: white;
-}
-
-th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-th {
-    background-color: #096a48;
-    
-}
-
-.tabela {
-    display: flex;
-    justify-content: center;
-}  */
-
-/* Estilo básico para tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px; /* Espaçamento inferior */
+    background-color: rgb(170, 234, 212);
 }
 
 /* Estilo para as células de cabeçalho */

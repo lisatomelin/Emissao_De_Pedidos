@@ -1,4 +1,9 @@
-let produtos = [];
+
+let produtos = JSON.parse(localStorage.getItem('Produtos'));
+if(produtos == null){
+    produtos = [];
+}
+console.log(produtos);
 
 document.getElementById('formularioCliente').addEventListener('submit', function(event) {
     event.preventDefault(); 
@@ -46,15 +51,15 @@ function salvarProduto(){
         unidades: document.getElementById('unidades').value,
         largura: Number(document.getElementById('largura').value),
         altura: Number(document.getElementById('altura').value),
-        metrosQuadrado:"",
+        metrosQuadrado: "",
         alturaComando: document.getElementById('alturaComando').value,
         modeloCorNumero: document.getElementById('modeloCorNumero').value,
         comando: iterarElemento(document.getElementsByName('comando')),
         bando: iterarElemento(document.getElementsByName('opcaoBando')),
         colocacao: iterarElemento(document.getElementsByName('opcaoFixacao')),
-        preco: document.getElementById('preco').value,
+        preco: Number(document.getElementById('preco').value),
     }
-    console.log((produtos.largura/100)*(produtos.altura/100));
+    produto.metrosQuadrado = `${(produto.largura/100)*(produto.altura/100).toFixed(2)} m2`;
     console.log(produto);
     produtos.push(produto);
     console.log(produtos);
@@ -72,9 +77,13 @@ function limparFormulario() {
         var elemento = formulario.elements[i];
 
         // Verifica se o elemento é um campo de entrada
-        if (elemento.tagName === 'INPUT' || elemento.tagName === 'TEXTAREA' || elemento.tagName === 'SELECT') {
+        if ((elemento.tagName === 'INPUT' && elemento.type !== 'radio')|| elemento.tagName === 'TEXTAREA' || elemento.tagName === 'SELECT') {
             // Define o valor do campo como vazio
             elemento.value = '';
+        }
+
+        if(elemento.type == 'radio'){
+            elemento.checked = false;
         }
     }
 }

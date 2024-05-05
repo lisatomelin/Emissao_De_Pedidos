@@ -18,6 +18,8 @@ document.getElementById('btnGerarPDF').addEventListener('click', () => {
 
     //GERAR E BAIXAR PDF
     html2pdf().set(options).from(body).save();
+    localStorage.removeItem('Produtos');
+    localStorage.removeItem('Cliente');
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,8 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function(){
     let tbody = document.getElementById('tbody');
+    let total = 0;
     produtos.forEach(x => {
         let linha = tbody.insertRow();
+        total += x.preco;
         linha.insertCell().textContent = x.localInstalacao; 
         linha.insertCell().textContent = x.unidades; 
         linha.insertCell().textContent = x.largura; 
@@ -55,6 +59,19 @@ document.addEventListener("DOMContentLoaded", function(){
         linha.insertCell().textContent = x.colocacao; 
         linha.insertCell().textContent = x.preco; 
     });
+    let linha = tbody.insertRow();
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = ""; 
+    linha.insertCell().textContent = `R$ ${total}`; 
 })
 
 

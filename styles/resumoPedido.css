@@ -37,7 +37,11 @@ td {
     padding: 8px; /* Espaçamento interno */
 }
 
-/* Estilo para linhas alternadas (opcional) */
+/* Estilo para linhas alternadas (opcional)
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares 
+} */
+
+#valorTotal{
+    background-color: red;
 }

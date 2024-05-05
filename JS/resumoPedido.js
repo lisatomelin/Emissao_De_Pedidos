@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cidade').textContent = "Cidade: "+cliente.cidade;
     document.getElementById('estado').textContent = "Estado: "+cliente.estado;
     document.getElementById('telefoneResidencial').textContent = "Telefone Residencial: "+cliente.telefoneResidencial;
-    document.getElementById('telefonePessoal').textContent = "Telefone Pessoal"+cliente.telefonePessoal;
+    document.getElementById('telefonePessoal').textContent = "Telefone Pessoal: "+cliente.telefonePessoal;
     document.getElementById('proximidade').textContent = "Proximidade: "+cliente.proximidade;
     document.getElementById('vendedor').textContent = "Vendedor: "+cliente.vendedor;
     document.getElementById('numeroPedido').textContent = "Numero do Pedido: "+cliente.numeroPedido;

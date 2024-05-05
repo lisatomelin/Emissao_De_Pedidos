@@ -1,13 +1,14 @@
-body{
-    background-color: rgb(75, 203, 75);
+#body{
+    background-color: rgb(249, 249, 249);
 }
 
 #titulo {
-    color: rgb(11, 88, 35);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
 #logoInformacoes{
+    color: #000000;
     display: flex;
     justify-content: center;
     margin-left: 10px;
@@ -15,6 +16,7 @@ body{
 }
 
 .tituloFormulario{
+    color: #000000;
     text-align: center;
     margin: 20px;
 }
@@ -25,7 +27,7 @@ form {
     margin: 0 auto; /* Centraliza o formulário na página */
     padding: 20px; /* Espaçamento interno */
     border: 1px solid #ddd; /* Borda */
-    background-color: #f9f9f9; /* Cor de fundo */
+    background-color: #d3c5c5; /* Cor de fundo */
     border-radius: 5px; /* Borda arredondada */
 }
 

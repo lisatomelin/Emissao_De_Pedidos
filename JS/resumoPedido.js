@@ -10,9 +10,9 @@ document.getElementById('btnGerarPDF').addEventListener('click', () => {
 
     //CONFIGURAÇÃO DO ARQUIVO FINAL DO PDF
     const options = {
-        margin : [10,10,10,10],
+        margin : [5,5,5,5],
         filename: `${cliente.nome}_${cliente.cpf_cnpj}.pdf`,
-        html2canvas: {scale: 2},
+        html2canvas: {scale: 12},
         jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}
     }
 
@@ -23,22 +23,22 @@ document.getElementById('btnGerarPDF').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('nome').textContent = "Nome: " + cliente.nome;
-    document.getElementById('dataNascimento').textContent  = "Data de nascimento: " + cliente.dataNascimento;
-    document.getElementById('cpf_cnpj').textContent = "Cpf/Cnpj: " +cliente.cpf_cnpj;
-    document.getElementById('endereco').textContent = "Endereço: "+cliente.endereco;
-    document.getElementById('numeroCasa').textContent = "N°: "+cliente.numeroCasa;
-    document.getElementById('bairro').textContent = "Bairro: "+cliente.bairro;
-    document.getElementById('cep').textContent = "Cep: "+cliente.cep;
-    document.getElementById('cidade').textContent = "Cidade: "+cliente.cidade;
-    document.getElementById('estado').textContent = "Estado: "+cliente.estado;
-    document.getElementById('telefoneResidencial').textContent = "Telefone Residencial: "+cliente.telefoneResidencial;
-    document.getElementById('telefonePessoal').textContent = "Telefone Pessoal: "+cliente.telefonePessoal;
-    document.getElementById('proximidade').textContent = "Proximidade: "+cliente.proximidade;
-    document.getElementById('vendedor').textContent = "Vendedor: "+cliente.vendedor;
-    document.getElementById('numeroPedido').textContent = "Numero do Pedido: "+cliente.numeroPedido;
-    document.getElementById('observacao').textContent = "Observações: "+cliente.observacao;
-    document.getElementById('email').textContent = "Email:"+cliente.email;
+    document.getElementById('nome').textContent = cliente.nome;
+    document.getElementById('dataNascimento').textContent  = cliente.dataNascimento;
+    document.getElementById('cpf_cnpj').textContent = cliente.cpf_cnpj;
+    document.getElementById('endereco').textContent = cliente.endereco;
+    document.getElementById('numeroCasa').textContent = cliente.numeroCasa;
+    document.getElementById('bairro').textContent = cliente.bairro;
+    document.getElementById('cep').textContent = cliente.cep;
+    document.getElementById('cidade').textContent = cliente.cidade;
+    document.getElementById('estado').textContent = cliente.estado;
+    document.getElementById('telefoneResidencial').textContent = cliente.telefoneResidencial;
+    document.getElementById('telefonePessoal').textContent = cliente.telefonePessoal;
+    document.getElementById('proximidade').textContent = cliente.proximidade;
+    document.getElementById('vendedor').textContent = cliente.vendedor;
+    document.getElementById('numeroPedido').textContent = cliente.numeroPedido;
+    document.getElementById('observacao').textContent = cliente.observacao;
+    document.getElementById('email').textContent = cliente.email;
 });
 
 document.addEventListener("DOMContentLoaded", function(){

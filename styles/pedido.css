@@ -15,7 +15,7 @@
 /* Estilo para o formulário */
 form {
     width: 100%;
-    max-width: 800px; /* Define a largura máxima do formulário */
+     /* Define a largura máxima do formulário */
     margin: 0 auto; /* Centraliza o formulário na página */
     padding: 30px; /* Espaçamento interno */
     border: 1px solid #ddd; /* Borda */
@@ -45,7 +45,7 @@ button {
     color: #fff; /* Cor do texto */
     padding: 10px 20px; /* Espaçamento interno */
     border: none; /* Remove a borda */
-    border-radius: 5px; /* Borda arredondada */
+    border-radius: 20px !important; /* Borda arredondada */
     cursor: pointer; /* Cursor ao passar por cima */
 }
 
@@ -53,6 +53,7 @@ button {
 button[type="submit"] {
     background-color: #ffffff; /* Cor de fundo */
     color: #000000;
+    border-radius: 20px;
 }
 
 /* Estilo para os rótulos */

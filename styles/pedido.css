@@ -2,17 +2,9 @@
     background-color: rgb(216, 216, 216);
 }
 
-#titulo {
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
 #logoInformacoes{
-    color: #000000;
     display: flex;
     justify-content: center;
-    margin-left: 10px;
-    align-items: center;
 }
 
 .tituloFormulario{
